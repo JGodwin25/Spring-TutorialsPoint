@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <bean id="helloworld" class="com.tutorialspoint.HelloWorld">
+ <constructor-arg ref = "dependencybean"/>
+ <property name="dependency2" ref="dependencybean2"/>
+ <property name="message" value="Jesus Christ"/>
+ </bean>
+ <bean id="dependencybean" class="com.tutorialspoint.Dependency1">
+ </bean>
+ <bean id="dependencybean2" class="com.tutorialspoint.Dependency2">
+ </bean>
+ </beans>

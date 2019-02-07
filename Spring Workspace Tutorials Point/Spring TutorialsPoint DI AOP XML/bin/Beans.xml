@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:aop = "http://www.springframework.org/schema/aop"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/aop 
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+ 
+ <!--AOP-->
+ <aop:config>
+ <!-- declare aspect and create bean-->
+ <aop:aspect id="logj" ref="mylogger">
+ <!-- declare pointcut-->
+ <!--<aop:pointcut id="selectAll" expression="expression(*com.tutorialspoint.HelloWorld.*.*(..))"/>-->
+ <aop:pointcut id="selectAll" expression="execution(com.tutorialspoint.HelloWorld.getMessage(..))"/>
+ <aop:before pointcut-ref="selectAll" method="beforeAdvice"/>
+ <aop:after pointcut-ref="selectAll" method="afterAdvice"/>
+ <aop:after-returning pointcut-ref="selectAll" method="afterReturningAdvice" returning="retVal"/>
+ <aop:after-throwing pointcut-ref="selectAll" method="afterThrowingAdvice" throwing="ex"/>
+ </aop:aspect>
+ </aop:config>
+ <!--AOP END-->
+ <bean id="helloworld" class="com.tutorialspoint.HelloWorld">
+ <constructor-arg ref = "dependencybean"/>
+ <property name="dependency2" ref="dependencybean2"/>
+ <property name="message" value="Jesus Christ"/>
+ </bean>
+ 
+ <bean id="dependencybean" class="com.tutorialspoint.Dependency1">
+ </bean>
+ 
+ <bean id="dependencybean2" class="com.tutorialspoint.Dependency2">
+ </bean>
+ 
+ <bean id="mylogger" class="com.tutorialspoint.MyLogger">
+ </bean>
+ 
+ </beans>

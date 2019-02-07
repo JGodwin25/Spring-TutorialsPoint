@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"   
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <!-- Must add if using annotations -->
+ <context:annotation-config/>
+ 
+ <bean id="helloworld" class="com.tutorialspoint.HelloWorld">
+ 
+ <!--<constructor-arg ref = "dependencybean"/>-->
+ <!--<property name="dependency1" ref="Dependency1"/>-->
+ <property name="message" value="Jesus Christ"/>
+ <property name="message2" value="Jesus Christ is my Saviour"/>
+ <property name="message3" value="Jesus Joseph Mary"/>
+ </bean>
+ 
+ <bean id="Dependency1" class="com.tutorialspoint.Dependency1">
+ </bean>
+ 
+ <bean id="Dependency2" class="com.tutorialspoint.Dependency2">
+ </bean>
+ 
+ </beans>
