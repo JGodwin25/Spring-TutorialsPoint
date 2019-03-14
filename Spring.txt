@@ -1,0 +1,31 @@
+Spring
+POJO
+https://stackoverflow.com/questions/3527264/how-to-create-a-pojo
+Ioc
+Meaning of inversion of control in Spring and Java: IoC explained
+https://www.theserverside.com/feature/Meaning-of-inversion-of-control-in-Spring-and-Java-IoC-explained
+IoC vs. DI
+https://dzone.com/articles/ioc-vs-di
+Aop
+https://www.javatpoint.com/spring-aop-tutorial
+Cross cutting concerns
+https://stackoverflow.com/questions/23700540/cross-cutting-concern-example
+Example: Cross Cutting Concerns of an Application
+https://dzone.com/articles/example-cross-cutting-concerns
+
+Tree set
+http://www.java2novice.com/java-collections-and-util/treeset/comparator-object/
+
+Aop proxy
+
+https://stackoverflow.com/questions/10239299/spring-aop-proxy-object
+
+https://javaranch.com/journal/2008/04/spring-aop-proxies.html
+
+Ant
+
+Maven
+
+https://stackoverflow.com/questions/16205778/what-are-maven-goals-and-phases-and-what-is-their-difference
+
+https://www.surasint.com/maven-life-cycle-phase-and-goal-easy-explained/
